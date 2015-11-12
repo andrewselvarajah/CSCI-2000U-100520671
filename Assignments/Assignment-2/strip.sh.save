@@ -1,0 +1,21 @@
+if test $# -ne 3 
+then 
+echo -e "\nUsage:\t$0 k m filename\n\nwhere...\tk:\t\tnumber of lines to strip from the top of the file\n\t\tm:\t\tnumber of lines to strip from the bottom of the file\n\t\tfilename:\tname of the file to process\n\n"; 
+fi 
+
+# please validate your arguments 
+
+skipBegin=`expr $1 + 1` 
+count=`wc $3|cut -d ' ' -f2` 
+keepCount=`expr $count - $1 - $2` 
+
+if test $keepCount -lt 0 
+then 
+echo "You cut too many lines." 
+exit 1 
+fi 
+
+tail -n +$skipBegin $3|head -n $keepCount#!/bin/bash
+# Andrew Selvarajah
+
+tail -n +k | head -n -m
