@@ -1,0 +1,10 @@
+1. 
+	a)Writes arguments to standard output.
+	b)Adds whats inside the brackets such like the foil method and displays the out as a string
+	c)displays the current date and time
+	d)displays the current name the user is
+	e)Displays the calender for the year 2000
+	f)Displays the calendar for the month and the year selected
+	g)opens the math library
+	h)bc adds the 2 numbers and echo prints it as an output
+
